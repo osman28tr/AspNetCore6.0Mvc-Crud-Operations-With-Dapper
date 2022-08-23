@@ -1,0 +1,186 @@
+﻿@using DapperExample.Entities
+@model List<TodoItem>
+@{
+	Layout = null;
+}
+<!--
+=========================================================
+* Argon Dashboard - v1.2.0
+=========================================================
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+
+
+* Copyright  Creative Tim (http://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+
+
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+	<meta name="author" content="Creative Tim">
+	<title>Asp.Net Core 6.0 | Crud Operations With Dapper</title>
+	<!-- Favicon -->
+	<link rel="icon" href="~/argon-dashboard-master/assets/img/brand/favicon.png" type="image/png">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+	<!-- Icons -->
+	<link rel="stylesheet" href="~/argon-dashboard-master/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+	<link rel="stylesheet" href="~/argon-dashboard-master/assets/vendor/fontawesome-free/css/all.min.css" type="text/css">
+	<!-- Argon CSS -->
+	<link rel="stylesheet" href="~/argon-dashboard-master/assets/css/argon.css?v=1.2.0" type="text/css">
+</head>
+
+<body>
+	<!-- Sidenav -->
+	<!-- Main content -->
+	<div class="main-content" id="panel">
+		<!-- Topnav -->
+		<!-- Header -->
+		<!-- Header -->
+		<!-- Dark table -->
+		<div class="row">
+			<div class="col">
+				<div class="card bg-default shadow">
+					<div class="card-header bg-transparent border-0">
+						<h3 class="text-white mb-0">Yapılacaklar</h3>
+					</div>
+					<div class="table-responsive">
+						<table class="table align-items-center table-dark table-flush">
+							<thead class="thead-dark">
+								<tr>
+									<th scope="col" class="sort" data-sort="name">#</th>
+									<th scope="col" class="sort" data-sort="budget">Başlık</th>
+									<th scope="col" class="sort" data-sort="status">Açıklama</th>
+									<th scope="col" class="sort" data-sort="completion">Durum</th>
+									<th scope="col" class="sort" data-sort="completion">Sil</th>
+									<th scope="col" class="sort" data-sort="completion">Düzenle</th>
+								</tr>
+							</thead>
+							<tbody class="list">
+								@foreach (var item in Model)
+								{
+									<tr>
+										<th scope="row">
+											<div class="media align-items-center">
+												<div class="media-body">
+													<span class="name mb-0 text-sm">@item.Id</span>
+												</div>
+											</div>
+										</th>
+										<td class="budget">
+											@item.Title
+										</td>
+										<td class="budget">
+											@item.Description
+										</td>
+										<td class="budget">
+											@item.Status
+										</td>
+										<td>
+											<a class="btn btn-outline-danger">Sil</a>
+										</td>
+										<td>
+											<a class="btn btn-outline-warning">Düzenle</a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+	</div>
+	<!-- Argon Scripts -->
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+@*<div class="table-responsive">
+	<!-- Projects table -->
+	<table class="table align-items-center table-flush">
+		<thead class="thead-light">
+			<tr>
+				<th>#</th>
+				<th>Başlık</th>
+				<th>Açıklama</th>
+				<th>Durum</th>
+				<th>Sil</th>
+				<th>Düzenle</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<th>
+						@item.Id
+					</th>
+					<td>
+						@item.Title
+					</td>
+					<td>
+						@item.Description
+					</td>
+					<td>
+						@item.Status
+					</td>
+					<td><a class="btn btn-danger">Sil</a></td>
+					<td><a class="btn btn-info">Güncelle</a></td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	<a href="/Skill/AddSkill/" class="btn btn-primary">Yeni Yetenek Ekle</a>
+
+</div>*@
+
+
+@*<table class="table-responsive-lg">
+		<tr>
+				<th >#</th>
+				<th>Başlık</th>
+				<th>Açıklama</th>
+				<th>Durum</th>
+				<th>Sil</th>
+				<th>Düzenle</th>
+				<th></th>
+		</tr>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<th>
+						@item.Id
+					</th>
+					<td>
+						@item.Title
+					</td>
+					<td>
+						@item.Description
+					</td>
+					<td>
+						@item.Status
+					</td>
+					@*<td><a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-danger">Sil</a></td>
+					<td><a href="/Skill/EditSkill/@item.SkillId" class="btn btn-info">Güncelle</a></td>*@
+			@*	</tr>
+			}
+	</table>*@
+<a href="/Skill/AddSkill/" class="btn btn-primary">Yeni Yapılacak Ekle</a>
