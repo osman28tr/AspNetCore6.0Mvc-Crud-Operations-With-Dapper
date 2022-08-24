@@ -1,0 +1,25 @@
+﻿@using DapperExample.Entities
+@model TodoItem
+@{
+	Layout = "~/Views/Shared/_NewLayout.cshtml";
+}
+@*@using (Html.BeginForm("AddTodo", "ToDo", FormMethod.Post))
+{*@
+    <div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<p class="card-description"> Yeni Yapılacak Ekleme Paneli </p>
+				<form class="form-group" method="post">
+					<br />
+					<label>Başlık</label>
+					@Html.TextBoxFor(x=>x.Title,new {@class="form-control"})
+					<br />
+					<label>Açıklama</label>
+					@Html.TextBoxFor(x=>x.Description,new {@class="form-control"})
+					<br />
+					<button class="btn btn-info">Kaydet</button>
+				</form>
+			</div>
+		</div>
+	</div>
+@*}*@

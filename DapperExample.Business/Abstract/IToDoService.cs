@@ -10,9 +10,9 @@ namespace DapperExample.Business.Abstract
     public interface IToDoService
     {
         public Task<List<TodoItem>> GetListAsync();
-        public Task<TodoItem> GetAsync(Guid id);
+        public Task<TodoItem> GetAsync(int id);
         public Task<TodoItem> InsertAsync(TodoItem todoItem);
-        public Task<TodoItem> UpdateAsync(Guid id, TodoItem todoItem);
-        public Task DeleteAsync(Guid id);
+        public Task<TodoItem> UpdateAsync(int id, TodoItem todoItem);
+        public Task DeleteAsync(int id);
     }
 }

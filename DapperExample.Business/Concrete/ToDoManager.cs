@@ -16,12 +16,12 @@ namespace DapperExample.Business.Concrete
         {
             _toDoDal = toDoDal;
         }
-        public async Task DeleteAsync(Guid id)
+        public async Task DeleteAsync(int id)
         {
             await _toDoDal.DeleteAsync(id);
         }
 
-        public async Task<TodoItem> GetAsync(Guid id)
+        public async Task<TodoItem> GetAsync(int id)
         {
            return await _toDoDal.GetAsync(id);
         }
@@ -36,7 +36,7 @@ namespace DapperExample.Business.Concrete
             return await _toDoDal.InsertAsync(todoItem);
         }
 
-        public async Task<TodoItem> UpdateAsync(Guid id, TodoItem todoItem)
+        public async Task<TodoItem> UpdateAsync(int id, TodoItem todoItem)
         {
             return await _toDoDal.UpdateAsync(id, todoItem);
         }
