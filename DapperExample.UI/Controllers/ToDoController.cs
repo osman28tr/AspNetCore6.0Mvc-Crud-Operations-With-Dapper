@@ -18,19 +18,37 @@ namespace DapperExample.UI.Controllers
         {
             return View();
         }
+        public IActionResult RedirectToDelete(int id)
+        {
+            return RedirectToAction("DeleteTodo",new { todoId=id });
+        }
+        public IActionResult RedirectToUpdate(int id)
+        {
+            return RedirectToAction("UpdateTodo", new { todoId = id });
+        }
         [HttpPost]
         public async Task<IActionResult> AddTodo(TodoItem todoItem)
         {
             todoItem.Status = true;
             await toDoManager.InsertAsync(todoItem);
-            return View();
+            return View("Index");
         }
         [HttpGet]
+        public async Task<IActionResult> UpdateTodo(int todoId)
+        {
+            var todoValue = await toDoManager.GetAsync(todoId);
+            return View(todoValue);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateTodo(TodoItem todoItem)
+        {
+            await toDoManager.UpdateAsync(todoItem.Id, todoItem);
+            return View("Index");
+        }
         public async Task<IActionResult> DeleteTodo(int todoId)
         {
             await toDoManager.DeleteAsync(todoId);
             return RedirectToAction("Index");
         }
-
     }
 }
