@@ -22,7 +22,7 @@ namespace DapperExample.DataAccess.Dapper
         public async Task<TodoItem> GetAsync(int id)
         {
             await using var connection = new SqlConnection(Context.Connection());
-            return await connection.QueryFirstAsync<TodoItem>($"SELECT * FROM dbo.TodoItems WHERE = '{id}'");
+            return await connection.QueryFirstAsync<TodoItem>($"SELECT * FROM dbo.TodoItems WHERE Id = '{id}'");
         }
 
         public async Task<List<TodoItem>> GetListAsync()
@@ -44,7 +44,7 @@ namespace DapperExample.DataAccess.Dapper
         public async Task<TodoItem> UpdateAsync(int id, TodoItem todoItem)
         {
             await using var connection = new SqlConnection(Context.Connection());
-            await connection.ExecuteAsync($"UPDATE dbo.TodoItems SET {nameof(TodoItem.Title)} = '{todoItem.Title}', {nameof(TodoItem.Description)} = '{todoItem.Description}', {nameof(TodoItem.Status)} = {true} WHERE Id = '{id}'");
+            await connection.ExecuteAsync($"UPDATE dbo.TodoItems SET {nameof(TodoItem.Title)} = '{todoItem.Title}', {nameof(TodoItem.Description)} = '{todoItem.Description}', {nameof(TodoItem.Status)} = '{todoItem.Status}' WHERE Id = '{id}'");
             return todoItem;
         }
     }

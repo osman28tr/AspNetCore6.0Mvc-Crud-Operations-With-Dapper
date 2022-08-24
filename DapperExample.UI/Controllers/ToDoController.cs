@@ -31,7 +31,7 @@ namespace DapperExample.UI.Controllers
         {
             todoItem.Status = true;
             await toDoManager.InsertAsync(todoItem);
-            return View("Index");
+            return View();
         }
         [HttpGet]
         public async Task<IActionResult> UpdateTodo(int todoId)
@@ -42,8 +42,9 @@ namespace DapperExample.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateTodo(TodoItem todoItem)
         {
+            todoItem.Status = true;
             await toDoManager.UpdateAsync(todoItem.Id, todoItem);
-            return View("Index");
+            return View();
         }
         public async Task<IActionResult> DeleteTodo(int todoId)
         {
