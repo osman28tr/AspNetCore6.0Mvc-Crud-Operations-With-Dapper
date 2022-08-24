@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample", "DapperExample\DapperExample.csproj", "{EF1C8046-0B9D-4674-B26B-EBFC8BA2C787}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperExample.DataAccess", "DapperExample.DataAccess\DapperExample.DataAccess.csproj", "{470881B0-26E4-46C0-B82A-96D7EA8F57D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample.DataAccess", "DapperExample.DataAccess\DapperExample.DataAccess.csproj", "{470881B0-26E4-46C0-B82A-96D7EA8F57D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperExample.Business", "DapperExample.Business\DapperExample.Business.csproj", "{072B45A4-25D3-4243-B5D3-1F0CA97417F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample.Business", "DapperExample.Business\DapperExample.Business.csproj", "{072B45A4-25D3-4243-B5D3-1F0CA97417F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperExample.Entities", "DapperExample.Entities\DapperExample.Entities.csproj", "{C9AF65E0-B13F-4E4F-A3BB-5EA4615B27AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample.Entities", "DapperExample.Entities\DapperExample.Entities.csproj", "{C9AF65E0-B13F-4E4F-A3BB-5EA4615B27AF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DapperExample.UI", "DapperExample.UI\DapperExample.UI.csproj", "{2A6C7FE1-1845-4C45-93B4-95B5393F4AB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperExample.UI", "DapperExample.UI\DapperExample.UI.csproj", "{2A6C7FE1-1845-4C45-93B4-95B5393F4AB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EF1C8046-0B9D-4674-B26B-EBFC8BA2C787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF1C8046-0B9D-4674-B26B-EBFC8BA2C787}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF1C8046-0B9D-4674-B26B-EBFC8BA2C787}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF1C8046-0B9D-4674-B26B-EBFC8BA2C787}.Release|Any CPU.Build.0 = Release|Any CPU
 		{470881B0-26E4-46C0-B82A-96D7EA8F57D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{470881B0-26E4-46C0-B82A-96D7EA8F57D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{470881B0-26E4-46C0-B82A-96D7EA8F57D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
